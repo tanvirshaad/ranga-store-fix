@@ -1,3 +1,4 @@
+//calling API
 const loadProducts = () => {
     const data = [
         {
@@ -206,11 +207,12 @@ const loadProducts = () => {
 
 // show all product in UI
 const showProducts = (products) => {
-    const allProducts = products.map((pd) => pd);
+    const allProducts = products.map((item) => item);
     for (const product of allProducts) {
         const image = product.images;
         const div = document.createElement('div');
         div.classList.add('product');
+        //setting inner HTML
         div.innerHTML = `
         <div class="single-product card">
             <img src="${product.image}" class="product-image card-img-top" alt="...">
@@ -234,11 +236,11 @@ let count = 0;
 const addToCart = (id, price) => {
     count = count + 1;
     updatePrice('price', price);
-    updateTotal();
     updateTaxAndCharge();
+    updateTotal();
     document.getElementById('total-Products').innerText = count;
 };
-
+// get input value function
 const getInputValue = (id) => {
     const element = document.getElementById(id).innerText;
     const converted = parseFloat(element);
@@ -283,4 +285,5 @@ const updateTotal = () => {
         getInputValue('total-tax');
     document.getElementById('total').innerText = grandTotal.toFixed(2);
 };
+
 loadProducts();

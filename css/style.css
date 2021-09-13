@@ -1,7 +1,6 @@
 body {
     overflow-x: hidden;
     font-family: 'Montserrat', sans-serif;
-    /* background: #d4ecdd !important; */
 }
 /* .search-field {
     border: none;
@@ -37,11 +36,8 @@ body {
     justify-content: center;
 }
 .single-product {
-    padding: 10px;
     transition: 0.6s;
     /* background-color: rgba(93, 169, 255, 0); */
-    background-color: #fff;
-    background-color: ivory;
     margin: 10px;
 }
 .card-body {
@@ -53,7 +49,7 @@ body {
     border: 1px solid springgreen;
 }
 .product-image {
-    padding: 10px;
+    padding: 30px;
     width: 100px;
     height: 240px;
 }
