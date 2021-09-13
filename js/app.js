@@ -219,6 +219,7 @@ const showProducts = (products) => {
                 <p class="card-text">
                     <p>Category: ${product.category}</p>
                     <h2>Price: ${product.price}</h2>
+                    <h6 class="text-muted">Rating: ${product.rating.rate} (${product.rating.count})</h4>
                 </p>
                 <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to
                 cart</button>
